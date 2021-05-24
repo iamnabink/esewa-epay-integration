@@ -4,7 +4,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:webview_flutter/platform_interface.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class EsewaEpay extends StatefulWidget {
@@ -13,9 +12,8 @@ class EsewaEpay extends StatefulWidget {
 }
 
 class _TestPageState extends State<EsewaEpay> {
-  Completer<WebViewController> _controller = Completer<WebViewController>();
 
-  late WebViewController _webViewController;
+  late WebViewController _webViewController; //late means later will be initialized
 
   String testUrl = "https://pub.dev/packages/webview_flutter";
 
