@@ -32,7 +32,7 @@ class _TestPageState extends State<EsewaEpay> {
   double pdc = 50;
   String scd = "EPAYTEST";
   String su = "https://github.com/iamnabink";
-  String fu = "https://refactoring.guru/design-patterns/factory-method";
+  String fu = "https://developer.esewa.com.np/#/epay";
 
   @override
   void initState() {
@@ -67,11 +67,11 @@ class _TestPageState extends State<EsewaEpay> {
           ),
         ]),
         onPageFinished: (data) {
-          setState(() {
+
             String pid = UniqueKey().toString();
             _webViewController.evaluateJavascript(
                 'requestPayment(tAmt = $tAmt, amt = $amt, txAmt = $txAmt, psc = $psc, pdc = $pdc, scd = "$scd", pid = "$pid", su = "$su", fu = "$fu")');
-          });
+
         },
         onWebViewCreated: (webViewController) {
           // _controller.complete(webViewController);
